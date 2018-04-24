@@ -14,22 +14,22 @@ spaceship::section() {
 
   [[ -z $3 && -z $4 ]] && content=$2 prefix=''
 
-  echo -n "%{%B%}" # set bold
+  # I don't like bold prefixes
   if [[ $spaceship_prompt_opened == true ]] && [[ $SPACESHIP_PROMPT_PREFIXES_SHOW == true ]]; then
     echo -n "$prefix"
   fi
   spaceship_prompt_opened=true
-  echo -n "%{%b%}" # unset bold
 
-  echo -n "%{%B$color%}" # set color
+  echo -n "%{%B%}"       # set bold
+  echo -n "%{$color%}"   # set color
   echo -n "$content"     # section content
-  echo -n "%{%b%f%}"     # unset color
+  echo -n "%{%f%}"       # unset color
+  echo -n "%{%b%}"       # unset bold
 
-  echo -n "%{%B%}" # reset bold, if it was diabled before
+  # I don't like bold suffixes either
   if [[ $SPACESHIP_PROMPT_SUFFIXES_SHOW == true ]]; then
     echo -n "$suffix"
   fi
-  echo -n "%{%b%}" # unset bold
 }
 
 # Compose whole prompt from sections
