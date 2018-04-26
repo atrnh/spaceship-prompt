@@ -25,10 +25,9 @@ SPACESHIP_TIME_AM="${SPACESHIP_TIME_AM="⛅ "}"
 spaceship_time() {
   [[ $SPACESHIP_TIME_SHOW == false ]] && return
 
-  local day_phase="$(print -P "%D{%p}")"
   local day_symbol
 
-  if [[ day_phase == "AM" ]]; then
+  if [ `date +%H` -lt 12 ]; then
     day_symbol="${SPACESHIP_TIME_AM}"
   else
     day_symbol="${SPACESHIP_TIME_PM}"
