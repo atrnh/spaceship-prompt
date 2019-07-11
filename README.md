@@ -16,4 +16,4 @@ SPACESHIP_TIME_AM="⛅ "
 ```
 
 For installation instructions, check the original
-[README](https://github.com/atrnh/spaceship-prompt/blob/master/README.md).
+[README](https://github.com/denysdovhan/spaceship-prompt/blob/master/README.md).
