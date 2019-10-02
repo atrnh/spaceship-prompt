@@ -1,5 +1,7 @@
   ![spaceship →~ prompt](https://raw.githubusercontent.com/atrnh/spaceship-prompt/master/spaceship-ampm.png)
 
+Showing students how to push
+
 # 🚀⭐ Spaceship ZSH
 
 Now with customizable indicators for AM/PM.
